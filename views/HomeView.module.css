@@ -30,5 +30,27 @@
   color: #00ffff;
   font-family: 'Courier New', monospace;
   text-shadow: 0 0 3px #00ffff;
+  margin-bottom: 2rem;
+}
+
+.cardsContainer {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.card {
+  flex: 1;
+  border: 1px solid #00ffff;
+  border-radius: 8px;
+  padding: 1.5rem;
+  background-color: rgba(10, 10, 10, 0.5);
+  box-shadow: 0 0 3px #00ffff;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 0 5px #00ffff;
+  background-color: rgba(10, 10, 10, 0.7);
 }
 

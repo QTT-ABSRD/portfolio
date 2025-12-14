@@ -14,32 +14,19 @@ interface SidebarProps {
 export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {
   return (
     <>
-      {!isOpen && (
-        <button 
-          className={styles.menuButton}
-          onClick={onToggle}
-          aria-label="Toggle menu"
-        >
-          <span className={styles.menuIcon}></span>
-          <span className={styles.menuIcon}></span>
-          <span className={styles.menuIcon}></span>
-        </button>
-      )}
+      <button 
+        className={`${styles.menuButton} ${isOpen ? styles.menuButtonOpen : ''}`}
+        onClick={onToggle}
+        aria-label="Toggle menu"
+      >
+        <span className={styles.menuIcon}></span>
+        <span className={styles.menuIcon}></span>
+        <span className={styles.menuIcon}></span>
+      </button>
       
       <nav className={`${styles.sidebar} ${isOpen ? styles.open : ''}`}>
         <div className={styles.sidebarHeader}>
           <h2 className={styles.sidebarTitle}>Menu</h2>
-          {isOpen && (
-            <button 
-              className={styles.menuButtonInside}
-              onClick={onToggle}
-              aria-label="Toggle menu"
-            >
-              <span className={styles.menuIcon}></span>
-              <span className={styles.menuIcon}></span>
-              <span className={styles.menuIcon}></span>
-            </button>
-          )}
         </div>
         <div className={`${styles.sidebarContent} ${isOpen ? styles.sidebarContentVisible : ''}`}>
           <ul className={styles.sidebarList}>

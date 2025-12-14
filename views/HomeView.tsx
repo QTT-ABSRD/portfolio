@@ -25,7 +25,14 @@ export const HomeView: React.FC<HomeViewProps> = ({ data }) => {
       <main className={`${styles.main} ${isSidebarOpen ? styles.mainWithSidebar : ''}`}>
         <div className={styles.content}>
           <h1>{data.title}</h1>
-          {/* Contenu principal à charger ici */}
+          <div className={styles.cardsContainer}>
+            <div className={styles.card}>
+              {/* Contenu de la première card */}
+            </div>
+            <div className={styles.card}>
+              {/* Contenu de la deuxième card */}
+            </div>
+          </div>
         </div>
       </main>
     </div>
