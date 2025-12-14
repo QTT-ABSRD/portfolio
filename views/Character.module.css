@@ -1,0 +1,154 @@
+.characterContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0;
+  transform: scale(2);
+}
+
+.character {
+  position: relative;
+  width: 32px;
+  height: 48px;
+  animation: walkBounce 0.6s ease-in-out infinite;
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+}
+
+/* Tête */
+.head {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 16px;
+  height: 16px;
+  background-color: #ff00ff;
+  border: 2px solid #00ffff;
+  border-radius: 0;
+  image-rendering: pixelated;
+  box-shadow: 
+    0 0 3px #ff00ff,
+    inset 0 0 2px rgba(255, 0, 255, 0.3);
+}
+
+/* Corps */
+.body {
+  position: absolute;
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 20px;
+  background-color: #00ffff;
+  border: 2px solid #ff00ff;
+  border-radius: 0;
+  image-rendering: pixelated;
+  box-shadow: 
+    0 0 3px #00ffff,
+    inset 0 0 2px rgba(0, 255, 255, 0.3);
+}
+
+/* Bras */
+.arm {
+  position: absolute;
+  width: 8px;
+  height: 16px;
+  background-color: #ff00ff;
+  border: 2px solid #00ffff;
+  border-radius: 0;
+  top: 18px;
+  image-rendering: pixelated;
+  box-shadow: 
+    0 0 2px #ff00ff,
+    inset 0 0 2px rgba(255, 0, 255, 0.3);
+}
+
+.armLeft {
+  left: 4px;
+  animation: armSwingLeft 0.6s ease-in-out infinite;
+  transform-origin: top center;
+}
+
+.armRight {
+  right: 4px;
+  animation: armSwingRight 0.6s ease-in-out infinite;
+  transform-origin: top center;
+}
+
+/* Jambes */
+.leg {
+  position: absolute;
+  width: 10px;
+  height: 16px;
+  background-color: #ffff00;
+  border: 2px solid #ff00ff;
+  border-radius: 0;
+  top: 36px;
+  image-rendering: pixelated;
+  box-shadow: 
+    0 0 2px #ffff00,
+    inset 0 0 2px rgba(255, 255, 0, 0.3);
+}
+
+.legLeft {
+  left: 6px;
+  animation: legSwingLeft 0.6s ease-in-out infinite;
+  transform-origin: top center;
+}
+
+.legRight {
+  right: 6px;
+  animation: legSwingRight 0.6s ease-in-out infinite;
+  transform-origin: top center;
+}
+
+/* Animation de marche - mouvement de rebond */
+@keyframes walkBounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+/* Animation des bras */
+@keyframes armSwingLeft {
+  0%, 100% {
+    transform: rotate(-10deg);
+  }
+  50% {
+    transform: rotate(20deg);
+  }
+}
+
+@keyframes armSwingRight {
+  0%, 100% {
+    transform: rotate(20deg);
+  }
+  50% {
+    transform: rotate(-10deg);
+  }
+}
+
+/* Animation des jambes */
+@keyframes legSwingLeft {
+  0%, 100% {
+    transform: rotate(15deg);
+  }
+  50% {
+    transform: rotate(-15deg);
+  }
+}
+
+@keyframes legSwingRight {
+  0%, 100% {
+    transform: rotate(-15deg);
+  }
+  50% {
+    transform: rotate(15deg);
+  }
+}
+

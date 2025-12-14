@@ -1,0 +1,33 @@
+.arrowButton {
+  background-color: transparent;
+  border: 1px solid #00ffff;
+  border-radius: 8px;
+  color: #00ffff;
+  padding: 12px 24px;
+  font-family: 'Courier New', monospace;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 3px #00ffff;
+}
+
+.arrowButton:hover {
+  background-color: rgba(0, 255, 255, 0.1);
+  box-shadow: 0 0 5px #00ffff;
+  transform: translateX(2px);
+}
+
+.arrowButton:active {
+  transform: translateX(4px);
+}
+
+.arrow {
+  font-size: 20px;
+  text-shadow: 0 0 3px #00ffff;
+  display: inline-block;
+}
+
