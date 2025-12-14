@@ -44,8 +44,10 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {
         <div className={`${styles.sidebarContent} ${isOpen ? styles.sidebarContentVisible : ''}`}>
           <ul className={styles.sidebarList}>
             <li><a href="#" className={styles.sidebarLink}>Home</a></li>
-            <li><a href="#" className={styles.sidebarLink}>À propos</a></li>
-            <li><a href="#" className={styles.sidebarLink}>Projets</a></li>
+            <li><a href="#" className={styles.sidebarLink}>Toolbox</a></li>
+            <li><a href="#" className={styles.sidebarLink}>Bibliotech</a></li>
+            <li><a href="#" className={styles.sidebarLink}>Projects</a></li>
+            <li><a href="#" className={styles.sidebarLink}>About me</a></li>
             <li><a href="#" className={styles.sidebarLink}>Contact</a></li>
           </ul>
         </div>
