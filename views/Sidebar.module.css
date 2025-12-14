@@ -1,6 +1,6 @@
 .menuButton {
   position: fixed;
-  top: 20px;
+  top: 80px;
   left: 20px;
   z-index: 1001;
   background-color: transparent;
@@ -13,6 +13,24 @@
   gap: 4px;
   transition: all 0.3s ease;
   box-shadow: 0 0 3px #00ffff;
+}
+
+.menuButtonInside {
+  background-color: transparent;
+  border: 1px solid #00ffff;
+  border-radius: 8px;
+  padding: 10px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 3px #00ffff;
+}
+
+.menuButtonInside:hover {
+  background-color: rgba(0, 255, 255, 0.1);
+  box-shadow: 0 0 5px #00ffff;
 }
 
 .menuButton:hover {
@@ -30,34 +48,58 @@
 
 .sidebar {
   position: fixed;
-  top: 0;
-  left: -250px;
-  width: 250px;
-  height: 100vh;
-  background-color: #0a0a0a;
-  border-right: 1px solid #00ffff;
-  box-shadow: 2px 0 10px rgba(0, 255, 255, 0.2);
-  transition: left 0.3s ease;
+  top: 60px;
+  left: 0;
+  width: 0;
+  height: calc(100vh - 60px);
+  background-color: transparent;
+  border-right: none;
+  box-shadow: none;
+  transition: width 0.3s ease;
   z-index: 1000;
-  overflow-y: auto;
+  overflow: hidden;
 }
 
 .sidebar.open {
-  left: 0;
+  width: 250px;
+  background-color: #0a0a0a;
+  border-right: 1px solid #00ffff;
+  box-shadow: 2px 0 10px rgba(0, 255, 255, 0.2);
+  overflow-y: auto;
 }
 
-.sidebarContent {
-  padding: 80px 20px 20px;
+.sidebarHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid #00ffff;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.sidebar.open .sidebarHeader {
+  opacity: 1;
 }
 
 .sidebarTitle {
   color: #00ffff;
   font-family: 'Courier New', monospace;
   font-size: 20px;
-  margin-bottom: 2rem;
+  margin: 0;
   text-shadow: 0 0 3px #00ffff;
-  border-bottom: 1px solid #00ffff;
-  padding-bottom: 1rem;
+}
+
+.sidebarContent {
+  padding: 20px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.sidebarContentVisible {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .sidebarList {
@@ -90,10 +132,10 @@
 
 .overlay {
   position: fixed;
-  top: 0;
+  top: 60px;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: calc(100vh - 60px);
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 999;
 }

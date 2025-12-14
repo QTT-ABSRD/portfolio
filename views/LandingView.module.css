@@ -5,6 +5,7 @@
   align-items: center;
   justify-content: center;
   padding: 2rem;
+  padding-top: calc(60px + 2rem);
   position: relative;
   overflow: hidden;
 }

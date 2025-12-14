@@ -9,7 +9,7 @@ export class HomeController {
    */
   static getPageData(): HomePageData {
     return {
-      title: "Accueil"
+      title: "Home"
     };
   }
 }

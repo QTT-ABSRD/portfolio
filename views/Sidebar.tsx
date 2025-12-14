@@ -14,21 +14,36 @@ interface SidebarProps {
 export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {
   return (
     <>
-      <button 
-        className={styles.menuButton}
-        onClick={onToggle}
-        aria-label="Toggle menu"
-      >
-        <span className={styles.menuIcon}></span>
-        <span className={styles.menuIcon}></span>
-        <span className={styles.menuIcon}></span>
-      </button>
+      {!isOpen && (
+        <button 
+          className={styles.menuButton}
+          onClick={onToggle}
+          aria-label="Toggle menu"
+        >
+          <span className={styles.menuIcon}></span>
+          <span className={styles.menuIcon}></span>
+          <span className={styles.menuIcon}></span>
+        </button>
+      )}
       
       <nav className={`${styles.sidebar} ${isOpen ? styles.open : ''}`}>
-        <div className={styles.sidebarContent}>
+        <div className={styles.sidebarHeader}>
           <h2 className={styles.sidebarTitle}>Menu</h2>
+          {isOpen && (
+            <button 
+              className={styles.menuButtonInside}
+              onClick={onToggle}
+              aria-label="Toggle menu"
+            >
+              <span className={styles.menuIcon}></span>
+              <span className={styles.menuIcon}></span>
+              <span className={styles.menuIcon}></span>
+            </button>
+          )}
+        </div>
+        <div className={`${styles.sidebarContent} ${isOpen ? styles.sidebarContentVisible : ''}`}>
           <ul className={styles.sidebarList}>
-            <li><a href="#" className={styles.sidebarLink}>Accueil</a></li>
+            <li><a href="#" className={styles.sidebarLink}>Home</a></li>
             <li><a href="#" className={styles.sidebarLink}>À propos</a></li>
             <li><a href="#" className={styles.sidebarLink}>Projets</a></li>
             <li><a href="#" className={styles.sidebarLink}>Contact</a></li>
