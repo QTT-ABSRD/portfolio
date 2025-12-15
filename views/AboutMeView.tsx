@@ -24,14 +24,15 @@ export const AboutMeView: React.FC<AboutMeViewProps> = ({ data }) => {
       <Sidebar isOpen={isSidebarOpen} onToggle={toggleSidebar} />
       <main className={`${styles.main} ${isSidebarOpen ? styles.mainWithSidebar : ''}`}>
         <div className={styles.content}>
-          <h1>{data.title}</h1>
-          
           <div className={styles.card}>
             <div className={styles.cardHeader}>
               <div className={styles.cardContent}>
                 <h2 className={styles.cardTitle}>Présentation</h2>
                 <p className={styles.cardText}>
-                  Étudiant en alternance pour un bachelor cybersécurité - administrateur réseau cybersécurité après une reconversion.
+                  A 34 ans, après une première vie professionnelle, je me suis reconverti dans l'informatique. <br /> 
+                  Après un BTS SIO option SLAM (développeur) et deux ans d'expériences professionnelles, j'ai décidé de poursuivre vers un Bachelor Cybersécurité.<br />
+                  <br />
+                  Actuellement en alternance pour un Bachelor Cybersécurité - Administrateur Réseau Cybersécurité à l'école CYBERSUP.
                 </p>
                 
                 <div className={styles.socialSection}>
@@ -56,8 +57,27 @@ export const AboutMeView: React.FC<AboutMeViewProps> = ({ data }) => {
                   </div>
                 </div>
               </div>
-              <div className={styles.photoPlaceholder}>
-                {/* Emplacement pour la photo */}
+              <div className={styles.photoSection}>
+                <div className={styles.photoPlaceholder}>
+                  {/* Emplacement pour la photo */}
+                </div>
+                <div className={styles.podium}>
+                  <div className={styles.podiumItem}>
+                    <div className={styles.podiumIcon}>🏆</div>
+                    <div className={styles.podiumLabel}>CTF</div>
+                    <div className={styles.podiumCounter}>0</div>
+                  </div>
+                  <div className={styles.podiumItem}>
+                    <div className={styles.podiumIcon}>💼</div>
+                    <div className={styles.podiumLabel}>Pro</div>
+                    <div className={styles.podiumCounter}>0</div>
+                  </div>
+                  <div className={styles.podiumItem}>
+                    <div className={styles.podiumIcon}>🔧</div>
+                    <div className={styles.podiumLabel}>Perso</div>
+                    <div className={styles.podiumCounter}>0</div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

@@ -24,7 +24,6 @@ export const HomeView: React.FC<HomeViewProps> = ({ data }) => {
       <Sidebar isOpen={isSidebarOpen} onToggle={toggleSidebar} />
       <main className={`${styles.main} ${isSidebarOpen ? styles.mainWithSidebar : ''}`}>
         <div className={styles.content}>
-          <h1>{data.title}</h1>
           <div className={styles.cardsContainer}>
             <div className={styles.card}>
               <h2 className={styles.cardTitle}>Bienvenue</h2>
