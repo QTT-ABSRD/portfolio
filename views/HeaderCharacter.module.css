@@ -27,7 +27,7 @@
   width: 10px;
   height: 10px;
   background-color: #ff00ff;
-  border: 1px solid #00ffff;
+  border: 1px solid #00ff00;
   border-radius: 0;
   image-rendering: pixelated;
   box-shadow: 
@@ -43,13 +43,13 @@
   transform: translateX(-50%);
   width: 12px;
   height: 12px;
-  background-color: #00ffff;
+  background-color: #00ff00;
   border: 1px solid #ff00ff;
   border-radius: 0;
   image-rendering: pixelated;
   box-shadow: 
-    0 0 3px #00ffff,
-    inset 0 0 2px rgba(0, 255, 255, 0.3);
+    0 0 3px #00ff00,
+    inset 0 0 2px rgba(0, 255, 0, 0.3);
 }
 
 /* Bras */
@@ -58,7 +58,7 @@
   width: 5px;
   height: 10px;
   background-color: #ff00ff;
-  border: 1px solid #00ffff;
+  border: 1px solid #00ff00;
   border-radius: 0;
   top: 11px;
   image-rendering: pixelated;

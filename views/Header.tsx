@@ -4,6 +4,7 @@ import React from 'react';
 import { usePathname } from 'next/navigation';
 import styles from './Header.module.css';
 import { HeaderCharacter } from './HeaderCharacter';
+import { SettingsButton } from './SettingsButton';
 
 /**
  * Fonction pour obtenir le titre selon la route
@@ -40,6 +41,7 @@ export const Header: React.FC = () => {
       <div className={styles.headerContent}>
         <h1 key={pathname} className={`${styles.logo} ${styles.logoAnimated}`}>{pageTitle}</h1>
       </div>
+      <SettingsButton />
     </header>
   );
 };

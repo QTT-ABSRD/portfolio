@@ -1,0 +1,30 @@
+.settingsButton {
+  background-color: transparent;
+  border: 1px solid #00ff00;
+  border-radius: 8px;
+  padding: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 3px #00ff00;
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 3;
+}
+
+.settingsButton:hover {
+  background-color: rgba(0, 255, 0, 0.1);
+  box-shadow: 0 0 5px #00ff00;
+}
+
+.settingsIcon {
+  width: 20px;
+  height: 20px;
+  color: #00ff00;
+  filter: drop-shadow(0 0 3px #00ff00);
+}
+

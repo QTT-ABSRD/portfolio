@@ -4,7 +4,7 @@
   left: 20px;
   z-index: 1001;
   background-color: transparent;
-  border: 1px solid #00ffff;
+  border: 1px solid #00ff00;
   border-radius: 8px;
   padding: 10px;
   cursor: pointer;
@@ -12,7 +12,7 @@
   flex-direction: column;
   gap: 4px;
   transition: all 0.3s ease;
-  box-shadow: 0 0 3px #00ffff;
+  box-shadow: 0 0 3px #00ff00;
 }
 
 .menuButtonOpen {
@@ -20,16 +20,16 @@
 }
 
 .menuButton:hover {
-  background-color: rgba(0, 255, 255, 0.1);
-  box-shadow: 0 0 5px #00ffff;
+  background-color: rgba(0, 255, 0, 0.1);
+  box-shadow: 0 0 5px #00ff00;
 }
 
 .menuIcon {
   width: 20px;
   height: 2px;
-  background-color: #00ffff;
+  background-color: #00ff00;
   transition: all 0.3s ease;
-  box-shadow: 0 0 3px #00ffff;
+  box-shadow: 0 0 3px #00ff00;
 }
 
 .sidebar {
@@ -49,8 +49,8 @@
 .sidebar.open {
   width: 250px;
   background-color: #0a0a0a;
-  border-right: 1px solid #00ffff;
-  box-shadow: 2px 0 10px rgba(0, 255, 255, 0.2);
+  border-right: 1px solid #00ff00;
+  box-shadow: 2px 0 10px rgba(0, 255, 0, 0.2);
   overflow-y: auto;
 }
 
@@ -59,7 +59,7 @@
   justify-content: flex-start;
   align-items: center;
   padding: 20px;
-  border-bottom: 1px solid #00ffff;
+  border-bottom: 1px solid #00ff00;
   opacity: 0;
   transition: opacity 0.3s ease;
 }
@@ -69,11 +69,11 @@
 }
 
 .sidebarTitle {
-  color: #00ffff;
+  color: #00ff00;
   font-family: 'Courier New', monospace;
   font-size: 20px;
   margin: 0;
-  text-shadow: 0 0 3px #00ffff;
+  text-shadow: 0 0 3px #00ff00;
 }
 
 .sidebarContent {
@@ -99,7 +99,7 @@
 }
 
 .sidebarLink {
-  color: #00ffff;
+  color: #00ff00;
   font-family: 'Courier New', monospace;
   text-decoration: none;
   display: block;
@@ -107,19 +107,19 @@
   border: 1px solid transparent;
   border-radius: 4px;
   transition: all 0.3s ease;
-  text-shadow: 0 0 3px #00ffff;
+  text-shadow: 0 0 3px #00ff00;
 }
 
 .sidebarLink:hover {
-  border-color: #00ffff;
-  background-color: rgba(0, 255, 255, 0.1);
-  box-shadow: 0 0 5px #00ffff;
+  border-color: #00ff00;
+  background-color: rgba(0, 255, 0, 0.1);
+  box-shadow: 0 0 5px #00ff00;
 }
 
 .sidebarLink.active {
-  border-color: #00ffff;
-  background-color: rgba(0, 255, 255, 0.15);
-  box-shadow: 0 0 5px #00ffff;
+  border-color: #00ff00;
+  background-color: rgba(0, 255, 0, 0.15);
+  box-shadow: 0 0 5px #00ff00;
 }
 
 .overlay {
