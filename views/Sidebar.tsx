@@ -1,6 +1,8 @@
 'use client';
 
 import React from 'react';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import styles from './Sidebar.module.css';
 
 interface SidebarProps {
@@ -12,6 +14,12 @@ interface SidebarProps {
  * Navbar latérale rétractable
  */
 export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {
+  const pathname = usePathname();
+
+  const handleLinkClick = () => {
+    onToggle(); // Fermer le menu après avoir cliqué sur un lien
+  };
+
   return (
     <>
       <button 
@@ -30,12 +38,60 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {
         </div>
         <div className={`${styles.sidebarContent} ${isOpen ? styles.sidebarContentVisible : ''}`}>
           <ul className={styles.sidebarList}>
-            <li><a href="#" className={styles.sidebarLink}>Home</a></li>
-            <li><a href="#" className={styles.sidebarLink}>Toolbox</a></li>
-            <li><a href="#" className={styles.sidebarLink}>Bibliotech</a></li>
-            <li><a href="#" className={styles.sidebarLink}>Projects</a></li>
-            <li><a href="#" className={styles.sidebarLink}>About me</a></li>
-            <li><a href="#" className={styles.sidebarLink}>Contact</a></li>
+            <li>
+              <Link 
+                href="/home" 
+                className={`${styles.sidebarLink} ${pathname === '/home' ? styles.active : ''}`}
+                onClick={handleLinkClick}
+              >
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link 
+                href="#" 
+                className={styles.sidebarLink}
+                onClick={handleLinkClick}
+              >
+                Toolbox
+              </Link>
+            </li>
+            <li>
+              <Link 
+                href="#" 
+                className={styles.sidebarLink}
+                onClick={handleLinkClick}
+              >
+                Bibliotech
+              </Link>
+            </li>
+            <li>
+              <Link 
+                href="#" 
+                className={styles.sidebarLink}
+                onClick={handleLinkClick}
+              >
+                Projects
+              </Link>
+            </li>
+            <li>
+              <Link 
+                href="/about-me" 
+                className={`${styles.sidebarLink} ${pathname === '/about-me' ? styles.active : ''}`}
+                onClick={handleLinkClick}
+              >
+                About me
+              </Link>
+            </li>
+            <li>
+              <Link 
+                href="#" 
+                className={styles.sidebarLink}
+                onClick={handleLinkClick}
+              >
+                Contact
+              </Link>
+            </li>
           </ul>
         </div>
       </nav>

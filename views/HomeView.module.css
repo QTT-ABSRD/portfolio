@@ -54,3 +54,24 @@
   background-color: rgba(10, 10, 10, 0.7);
 }
 
+.cardTitle {
+  color: #00ffff;
+  font-family: 'Courier New', monospace;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0 0 1rem 0;
+  text-shadow: 0 0 3px #00ffff;
+}
+
+.cardText {
+  color: #ffffff;
+  font-family: 'Courier New', monospace;
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0 0 1rem 0;
+}
+
+.cardText:last-child {
+  margin-bottom: 0;
+}
+
